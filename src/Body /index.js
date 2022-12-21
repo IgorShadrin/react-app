@@ -17,8 +17,8 @@ export function Body() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="mb-4">
-        Launch
+      <Button className="mb-4" variant="primary" onClick={handleShow}>
+        Search
       </Button>   
       <OffcanvasExample show={show} handleClose={handleClose}> /</OffcanvasExample>
       <Tabs
