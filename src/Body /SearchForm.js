@@ -1,10 +1,9 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-// import { eventWrapper } from "@testing-library/user-event/dist/utils";
+
 
 function SearchForm(defaultProps) {
   const units = ["standard", "metric", "imperial"];
-
   const languages = [
     { code: "en", label: "English" },
     { code: "fi", label: "Finnish" },
@@ -12,12 +11,9 @@ function SearchForm(defaultProps) {
     { code: "sv", label: "Swedish" },
     { code: "zn_cn", label: "Chinese Simplified" },
   ];
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event);
-
-
     const data = {
       lat: event.target.lat.value, 
       lon: event.target.lon.value,
@@ -25,9 +21,7 @@ function SearchForm(defaultProps) {
       lang: event.target.lang.value,  
     };
 
-    console.log(data);
-   
-
+    console.log(data);  
   }
   return (
     <Form onSubmit={handleSubmit}>

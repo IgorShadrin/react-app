@@ -1,6 +1,9 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import React from "react";
 import SearchForm from "./SearchForm";
+import ExportDataForm from "./ExportDataForm";
+
+
 
 export function OffcanvasExample(props) {
   return (
@@ -11,6 +14,7 @@ export function OffcanvasExample(props) {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <SearchForm />
+          <ExportDataForm />
         </Offcanvas.Body>
       </Offcanvas>
     </>
