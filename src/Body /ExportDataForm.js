@@ -7,6 +7,7 @@ function ExportDataForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    window.open().document.write(`You ${event.target.extension.value} choose extension`);
 
   };
   return (
@@ -26,7 +27,7 @@ function ExportDataForm() {
         ))}
       </Form.Group>
 
-      <Button className="w-100" variant="primary" type="submit" onClick={()=> window.open()}>
+      <Button className="w-100" variant="primary" type="submit">
         Submit
       </Button>
     </Form>
