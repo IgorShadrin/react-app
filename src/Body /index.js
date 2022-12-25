@@ -1,16 +1,18 @@
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import TimeSelector from "./TimeSelector";
-import Map from "./Map";
 import { OffcanvasExample } from "./Offcanvas";
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
+import Forecast from "./Tabs/Forecast";
+import Now from "./Tabs/Now";
+
 
 
 export function Body() {
 
 
   const [show, setShow] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -20,7 +22,7 @@ export function Body() {
       <Button className="mb-4" variant="primary" onClick={handleShow}>
         Search
       </Button>   
-      <OffcanvasExample show={show} handleClose={handleClose}> /</OffcanvasExample>
+      <OffcanvasExample show={show} handleClose={handleClose}   />
       <Tabs
         defaultActiveKey="now"
         id="justify-tab-example"
@@ -28,17 +30,15 @@ export function Body() {
         justify
       >
         <Tab eventKey="now" title="Now">
-          <TimeSelector id="now" />
-          <Map />
+          <Now />
         </Tab>
-        <Tab eventKey="forecat" title="Forecast">
-          <TimeSelector id="forecast" />
-          <Map />
+        <Tab eventKey="forecat" title="Forecast">  
+          <Forecast /> 
         </Tab>
-        <Map />
       </Tabs>
     </>
   );
 }
+
 
 export default Body;

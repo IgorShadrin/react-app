@@ -13,7 +13,7 @@ export function OffcanvasExample(props) {
           <Offcanvas.Title>Search</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <SearchForm />
+          <SearchForm  />
           <ExportDataForm />
         </Offcanvas.Body>
       </Offcanvas>
