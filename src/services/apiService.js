@@ -1,10 +1,10 @@
 const apiUrl = "https://api.openweathermap.org/data/2.5";
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = "d5d54a3865458638b7cb5222f1881308";
 
 export const defaultSearchParams = {
   lat: 58.5953,
   lon: 25.0136,
-  unit: "metric",
+  units: "metric",
   lang: "en",
 };
 export async function getWeather(data = null) {
